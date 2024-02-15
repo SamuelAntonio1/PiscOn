@@ -1,0 +1,6 @@
+@PiscOn.Api_HostAddress = http://localhost:5074
+
+GET {{PiscOn.Api_HostAddress}}/contatos/
+Accept: application/json
+
+###
