@@ -5,6 +5,8 @@ using PiscOn.Api.Classes.Repositories;
 
 namespace PiscOn.Api.Controllers
 {
+    [Route("[controller]")]
+    [ApiController]
     public class ContatosController : Controller
     {
         private readonly ContatoRepository contatoRepository;
@@ -14,7 +16,7 @@ namespace PiscOn.Api.Controllers
             this.contatoRepository = contatoRepository;
         }
 
-        [HttpGet("lista")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Contato>> Lista()
         {
@@ -40,7 +42,7 @@ namespace PiscOn.Api.Controllers
             return Ok(contato);
         }
 
-        [HttpPost("adicionar")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -59,7 +61,7 @@ namespace PiscOn.Api.Controllers
             return CreatedAtAction(nameof(Adicionar), contato);
         }
 
-        [HttpPut("atualizar")]
+        [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -82,7 +84,7 @@ namespace PiscOn.Api.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{codigo}/excluir")]
+        [HttpDelete("{codigo}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

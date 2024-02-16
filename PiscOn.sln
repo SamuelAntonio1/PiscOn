@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiscOn.Api", "PiscOn.Api\PiscOn.Api.csproj", "{0482E3FD-F670-4052-9F9A-B72A3ACEE304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiscOn.Api", "PiscOn.Api\PiscOn.Api.csproj", "{0482E3FD-F670-4052-9F9A-B72A3ACEE304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsicOn.Web", "PsicOn.Web\PsicOn.Web.csproj", "{B8753A8A-90B5-47CF-8367-F96350B92095}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0482E3FD-F670-4052-9F9A-B72A3ACEE304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0482E3FD-F670-4052-9F9A-B72A3ACEE304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0482E3FD-F670-4052-9F9A-B72A3ACEE304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8753A8A-90B5-47CF-8367-F96350B92095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8753A8A-90B5-47CF-8367-F96350B92095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8753A8A-90B5-47CF-8367-F96350B92095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8753A8A-90B5-47CF-8367-F96350B92095}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

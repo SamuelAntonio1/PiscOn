@@ -14,6 +14,7 @@ namespace PiscOn.Api.Classes.Repositories
             var sql = new StringBuilder();
             sql.AppendLine("SELECT \"CodigoContato\", \"Nome\", \"Celular\", \"CPF\", \"Email\" ");
             sql.AppendLine("  FROM public.\"Contato\" ");
+            sql.AppendLine(" ORDER BY \"Nome\" ");
 
             return Lista(sql).ToList(); 
         }

@@ -5,6 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region [ Add services to the container ]
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAnyOrigin",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
+
 builder.Services.RepositoriesDI();
 builder.Services.ServicesDI();
 
@@ -25,6 +33,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAnyOrigin");
 
 app.UseHttpsRedirection();
 

@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PsicOn.Web.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>PsicOn</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style type="text/css">
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        #btn-salvar {
+            background-color: #61dafb;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+        }
+        
+        #btn-salvar:hover {
+            background-color: #0094ff;
+            color: white;
+        }
+
+        #btn-novo {
+            background-color: #61dafb;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        #btn-novo:hover {
+            background-color: #0094ff;
+            color: white;
+        }
+
+        #btn-cancelar {
+            background-color: #eaeaea;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        #btn-cancelar:hover {
+            background-color: #808080;
+            color: white;
+        }
+
+        #btn-excluir {
+            background-color: #eaeaea;
+            color: #ff0000;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+            transition: background-color 0.3s;
+        }
+        
+        #btn-excluir:hover {
+            background-color: #ff0000;
+            color: white;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function lerParametroUrl(parametro) {
+
+            try {
+
+                var url = window.location.search.replace("?", "");
+                var itens = url.split("&");
+
+                for (var i = 0; i < itens.length; i++) {
+
+                    var parametros = itens[i].split("=");
+
+                    if (parametros[0].toLowerCase() == parametro.toLowerCase())
+                        return decodeURIComponent(parametros[1]);
+                }
+                return null;
+            }
+            catch (e) {
+                return null;
+            }
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <asp:ContentPlaceHolder ID="cphConteudo" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <asp:ContentPlaceHolder ID="cphScripts" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</body>
+</html>
