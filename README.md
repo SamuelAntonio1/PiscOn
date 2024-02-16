@@ -18,3 +18,5 @@ PsicOn.Web
 É um projeto do tipo AspNet Web utilizando MasterPage e JQuery para comunicação com a API de dados
 Pacotes
 - .Net Framework 4.8
+
+** Para logar no site utilize o seguinte login Usuário: ADMIN Senha: ADMIN
